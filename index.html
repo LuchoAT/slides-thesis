@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Defensa de Tesis de Grado — Tutor Inteligente Coach · UMSA 2026</title>
+
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/white.css" />
+  <link rel="stylesheet" href="custom.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="ac-topbar"></div>
+
+  <div id="ac-header">
+    <span class="h-left">Defensa de Tesis de Grado</span>
+    <span class="h-right" id="ac-slide-label">Diapositiva 1 / 17</span>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ─── 1: PORTADA ──────────────────────────────────────── -->
+      <section class="slide-cover">
+        <div class="cover-content">
+          <div class="fit-content">
+            <img class="cover-logo" src="assets/logo-umsa.png" alt="Logo Universidad Mayor de San Andrés"
+              onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" />
+            <div id="logo-fallback" class="cover-logo-placeholder" style="display:none">UMSA</div>
+
+            <div class="cover-badge">Defensa de Tesis de Grado</div>
+
+            <div class="cover-tag">
+              Universidad Mayor de San Andrés &nbsp;·&nbsp; Facultad de Ciencias Puras y Naturales &nbsp;·&nbsp; Carrera de Informática
+            </div>
+
+            <h1 class="cover-title">
+              Tutor Inteligente Tipo Coach para Personas que Practican la Programación Competitiva
+            </h1>
+
+            <div class="cover-divider"></div>
+
+            <div class="cover-meta">
+              <strong>Tesis de Grado para optar al grado de Licenciatura</strong>
+              Mención: Ingeniería de Sistemas Informáticos<br>
+              Postulante: Luis David Ajhuacho Tarquino<br>
+              Tutor: M.Sc. Jorge Humberto Terán Pomier<br>
+              La Paz &ndash; Bolivia, 2026
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 2: PROBLEMA Y MOTIVACIÓN ─────────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Planteamiento</div>
+            <h2 class="slide-title">Problema y Motivación</h2>
+            <span class="context-badge">Contexto: estudiantes universitarios bolivianos</span>
+            <div class="cause-flow">
+              <div class="cause-flow-col fragment">
+                <span class="cf-label">Causas</span>
+                <ul>
+                  <li>Autoestudio sin guía clara.</li>
+                  <li>Recursos dispersos.</li>
+                  <li>Falta de tutores especializados.</li>
+                </ul>
+              </div>
+              <div class="cause-flow-arrow fragment">→</div>
+              <div class="cause-flow-col central fragment">
+                <span class="cf-label">Problema central</span>
+                <span class="cf-central-text">Bajo nivel de preparación estructurada en programación competitiva.</span>
+              </div>
+              <div class="cause-flow-arrow fragment">→</div>
+              <div class="cause-flow-col fragment">
+                <span class="cf-label">Consecuencias</span>
+                <ul>
+                  <li>Desmotivación, abandono temprano y menor eficacia algorítmica.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 3: PREGUNTA, OBJETIVO E HIPÓTESIS ───────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Investigación</div>
+            <h2 class="slide-title">Pregunta, Objetivo e Hipótesis</h2>
+            <div class="flow-row two">
+              <div class="flow-box fragment">
+                <div class="flow-label">Pregunta de investigación</div>
+                <p style="font-size:17px; line-height:1.4; color:#2d3748; margin:0;">¿Cómo mejorar la preparación estructurada y la eficacia algorítmica en estudiantes universitarios de informática en Bolivia?</p>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Objetivo general</div>
+                <p style="font-size:16px; line-height:1.4; color:#2d3748; margin:0;">Desarrollar el tutor virtual inteligente <strong style="color:var(--ac-accent)">Coach</strong>, basado en sistemas multiagente con CrewAI, para mejorar la preparación estructurada y la eficacia en la resolución de problemas algorítmicos.</p>
+              </div>
+            </div>
+            <div class="ac-box hypothesis-box fragment">
+              <strong>Hipótesis</strong>
+              <p style="font-size:17px; line-height:1.42; color:#2d3748; margin:0;">El desarrollo del tutor virtual inteligente <strong style="color:var(--ac-accent)">Coach</strong>, basado en un enfoque de <strong style="color:var(--ac-accent)">sistemas multiagente</strong>, <strong style="color:var(--ac-accent)">mejora significativamente</strong> el nivel de preparación estructurada y la eficacia en la resolución de problemas algorítmicos en los estudiantes universitarios bolivianos, con un nivel de confianza del <strong style="color:var(--ac-accent)">95%</strong>.</p>
+            </div>
+            <div class="mini-flow fragment">
+              <span class="mini-flow-step">Diagnosticar</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Diseñar arquitectura</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Construir prototipo</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Validar eficacia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 4: VARIABLES E INDICADORES ──────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Investigación</div>
+            <h2 class="slide-title">Variables e Indicadores</h2>
+            <div class="obj-grid">
+              <div class="ac-box fragment">
+                <strong>Variable independiente (X)</strong>
+                Tutor virtual inteligente Coach. Enfoque de sistemas multiagente con CrewAI.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Variable dependiente (Y)</strong>
+                Nivel de preparación estructurada. Eficacia en la resolución de problemas algorítmicos.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Indicadores de desempeño</strong>
+                Puntaje pretest/postest, problemas resueltos correctamente y tiempo de resolución.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Indicadores de percepción</strong>
+                Usabilidad, utilidad percibida y satisfacción mediante encuesta tipo Likert.
+              </div>
+            </div>
+            <div class="xy-diagram fragment">
+              <div class="xy-box xy-x"><span class="xy-tag">X</span>Uso de Coach</div>
+              <div class="xy-arrow">→<span class="xy-formula">Y = f(X)</span></div>
+              <div class="xy-box xy-y"><span class="xy-tag">Y</span>Preparación estructurada + eficacia algorítmica</div>
+            </div>
+            <div class="kw-tags center fragment" style="margin-top:8px;">
+              <span class="kw-tag">Puntaje</span>
+              <span class="kw-tag">Problemas correctos</span>
+              <span class="kw-tag">Tiempo</span>
+            </div>
+            <p class="proto-note" style="text-align:center; margin-top:6px;">La encuesta Likert se aplica al grupo experimental.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 5: ALCANCE DE LA INVESTIGACIÓN ──────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Alcance</div>
+            <h2 class="slide-title">Alcance de la Investigación</h2>
+            <div class="obj-grid">
+              <div class="ac-box fragment">
+                <strong>Contexto</strong>
+                Universidades bolivianas, con prueba piloto en UMSA y comunidades de programación de La Paz.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Temas algorítmicos</strong>
+                Búsqueda binaria, BFS, DFS y programación dinámica básica.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Funciones</strong>
+                Explicación guiada, pistas progresivas, supervisión, recomendación y retroalimentación formativa.
+              </div>
+              <div class="ac-box fragment">
+                <strong>Validación</strong>
+                Grupo control y grupo experimental.
+              </div>
+            </div>
+            <div class="kw-tags center fragment" style="margin-top:8px;">
+              <span class="kw-tag">Búsqueda binaria</span>
+              <span class="kw-tag">BFS</span>
+              <span class="kw-tag">DFS</span>
+              <span class="kw-tag">DP básica</span>
+            </div>
+            <p class="proto-note" style="text-align:center; margin-top:8px;">Enfoque del prototipo: tutoría pedagógica formativa.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 6: FUNDAMENTO TEÓRICO MÍNIMO ────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Marco teórico</div>
+            <h2 class="slide-title">Fundamento Teórico Mínimo</h2>
+            <div class="sti-grid">
+              <div class="sti-center">COACH<span class="sti-center-sub">SISTEMA</span></div>
+              <div class="sti-box sti-tl fragment">
+                <strong>Programación competitiva</strong>
+                <ul><li>Dominio de aplicación del tutor.</li></ul>
+              </div>
+              <div class="sti-box sti-tr fragment">
+                <strong>Sistemas Tutores Inteligentes</strong>
+                <ul><li>Andamiaje cognitivo y retroalimentación formativa.</li></ul>
+              </div>
+              <div class="sti-box sti-bl fragment">
+                <strong>Sistemas multiagente</strong>
+                <ul><li>Distribución de responsabilidades entre agentes.</li></ul>
+              </div>
+              <div class="sti-box sti-br fragment">
+                <strong>AOSE · LLM · CrewAI</strong>
+                <ul>
+                  <li><strong style="color:var(--ac-blue);">AOSE</strong> — metodología para diseñar agentes, roles e interacciones.</li>
+                  <li><strong style="color:var(--ac-accent);">LLM · CrewAI</strong> — modelos de lenguaje orquestados como framework técnico.</li>
+                </ul>
+              </div>
+            </div>
+            <p class="proto-note fragment" style="text-align:center; margin-top:8px;">Coach integra pedagogía, IA tutorial y desarrollo orientado a agentes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 7: METODOLOGÍA DE INVESTIGACIÓN ─────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Diseño metodológico</div>
+            <h2 class="slide-title">Metodología de Investigación</h2>
+            <div class="tl-timeline">
+              <div class="tl-item fragment">
+                <div class="tl-number">1</div>
+                <div class="tl-label">Método científico</div>
+                <div class="tl-desc">Marco general de investigación.</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">2</div>
+                <div class="tl-label">Cuasi-experimental</div>
+                <div class="tl-desc">Grupo control y grupo experimental.</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">3</div>
+                <div class="tl-label">Pretest</div>
+                <div class="tl-desc">Medición inicial de ambos grupos.</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">4</div>
+                <div class="tl-label">Intervención</div>
+                <div class="tl-desc">Control: preparación habitual<br>Experimental: uso de Coach</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">5</div>
+                <div class="tl-label">Postest</div>
+                <div class="tl-desc">Medición final de ambos grupos.</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">6</div>
+                <div class="tl-label">Análisis</div>
+                <div class="tl-desc">Rúbrica, tiempo, Likert y t de Welch.</div>
+              </div>
+            </div>
+            <div class="ac-box fragment" style="margin-top:10px;">
+              <strong>Enfoque cuantitativo</strong>
+              Medición mediante datos de desempeño y percepción a lo largo de las seis etapas.
+            </div>
+            <div class="kw-tags center fragment" style="margin-top:8px;">
+              <span class="kw-tag">n = 20</span>
+              <span class="kw-tag">Control: E01–E10</span>
+              <span class="kw-tag">Experimental: E11–E20</span>
+              <span class="kw-tag">Muestreo intencional no probabilístico</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 8: METODOLOGÍA DE DESARROLLO ────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Diseño metodológico</div>
+            <h2 class="slide-title">Metodología de Desarrollo</h2>
+            <div class="method-layers">
+              <div class="method-layer fragment">
+                <span class="ml-label">AOSE</span>
+                <span class="ml-desc">Metodología de diseño: metas, roles, tareas e interacciones.</span>
+              </div>
+              <div class="method-layer fragment">
+                <span class="ml-label">Gaia y Prometheus</span>
+                <span class="ml-desc">Referencias de apoyo dentro de AOSE.</span>
+              </div>
+              <div class="method-layer fragment">
+                <span class="ml-label">CrewAI</span>
+                <span class="ml-desc">Framework técnico de coordinación, no metodología de investigación.</span>
+              </div>
+            </div>
+            <div class="tl-timeline" style="margin-top:10px;">
+              <div class="tl-item fragment">
+                <div class="tl-number">1</div>
+                <div class="tl-label">Análisis</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">2</div>
+                <div class="tl-label">Organización</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">3</div>
+                <div class="tl-label">Desarrollo de agentes</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">4</div>
+                <div class="tl-label">Implementación e integración</div>
+              </div>
+              <div class="tl-item fragment">
+                <div class="tl-number">5</div>
+                <div class="tl-label">Validación</div>
+              </div>
+            </div>
+            <div class="ac-box fragment" style="margin-top:10px;">
+              <strong>AOSE diseña</strong> la arquitectura multiagente; <strong>CrewAI implementa y coordina</strong> su ejecución.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 9: MODELO GENERAL DEL SISTEMA COACH ─────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Sistema Coach</div>
+            <h2 class="slide-title">Modelo General del Sistema Coach</h2>
+            <div class="flow-row six">
+              <div class="flow-box fragment">
+                <div class="flow-label">Estudiante</div>
+                <ul>
+                  <li>Consulta, problema o intento</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Interfaz del prototipo</div>
+                <ul>
+                  <li>Selección de tema e historial local</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Procesamiento pedagógico</div>
+                <ul>
+                  <li>Clasificación de necesidad</li>
+                  <li>Orquestación con CrewAI</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Agentes especializados</div>
+                <ul>
+                  <li>Interviene el agente correspondiente</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Respuesta formativa</div>
+                <ul>
+                  <li>Explicación, pista, retroalimentación, recomendación</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Seguimiento básico del progreso</div>
+                <ul>
+                  <li>Actualiza historial y habilita nuevas interacciones</li>
+                </ul>
+              </div>
+            </div>
+            <p class="proto-note fragment" style="text-align:center; margin-top:10px;">El sistema orienta, explica, supervisa y retroalimenta el aprendizaje.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 10: ORGANIZACIÓN MULTIAGENTE ────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Sistema Coach</div>
+            <h2 class="slide-title">Organización Multiagente</h2>
+            <div style="text-align:center; margin-bottom:10px;">
+              <span class="kw-tag" style="font-size:15px;">Sistema Coach</span>
+            </div>
+            <div class="ac-cols thirds">
+              <div class="agent-box fragment">
+                <span class="agent-icon">✎</span>
+                <span class="agent-name">Agente Explicador</span>
+                <ul>
+                  <li>Explica conceptos, enunciados y estrategias.</li>
+                  <li>Entrega pistas progresivas.</li>
+                </ul>
+              </div>
+              <div class="agent-box fragment">
+                <span class="agent-icon">◎</span>
+                <span class="agent-name">Agente Supervisor</span>
+                <ul>
+                  <li>Monitorea progreso y nivel.</li>
+                  <li>Ajusta la ruta de práctica.</li>
+                </ul>
+              </div>
+              <div class="agent-box fragment">
+                <span class="agent-icon">✓</span>
+                <span class="agent-name">Agente Evaluador</span>
+                <ul>
+                  <li>Revisa razonamiento, complejidad, casos borde e intentos del estudiante.</li>
+                  <li>Genera retroalimentación formativa.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="method-layers" style="margin-top:10px;">
+              <div class="method-layer fragment">
+                <span class="ml-label">CrewAI</span>
+                <span class="ml-desc">Coordina técnicamente el flujo entre los tres agentes; no es un agente adicional.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 11: FLUJO DE INTERACCIÓN ESTUDIANTE–COACH ───────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Sistema Coach</div>
+            <h2 class="slide-title">Flujo de Interacción Estudiante–Coach</h2>
+            <div class="flow-row five">
+              <div class="flow-box fragment">
+                <div class="flow-label">Estudiante</div>
+                <ul>
+                  <li>Ingresa consulta o intento.</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Sistema Coach</div>
+                <ul>
+                  <li>Analiza la necesidad.</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Coordinación técnica</div>
+                <ul>
+                  <li>CrewAI coordina técnicamente la tarea.</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Agentes especializados</div>
+                <ul>
+                  <li>Interviene el agente correspondiente.</li>
+                </ul>
+              </div>
+              <div class="flow-arrow fragment">→</div>
+              <div class="flow-box fragment">
+                <div class="flow-label">Respuesta y progreso</div>
+                <ul>
+                  <li>Respuesta pedagógica y registro de progreso.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mini-flow fragment" style="margin-top:10px;">
+              <span class="mini-flow-step">Respuesta y progreso</span>
+              <span class="mini-flow-arrow">↩</span>
+              <span class="mini-flow-step">Historial y progreso actualizado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 12: PROTOTIPO FUNCIONAL ─────────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Sistema Coach</div>
+            <h2 class="slide-title">Prototipo Funcional</h2>
+            <div class="ac-cols">
+              <div class="proto-item">
+                <div class="proto-screenshot proto-main">
+                  <img src="assets/prototype-response.png" alt="Respuesta pedagógica"
+                       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <div class="proto-placeholder" style="display:none">Captura pendiente</div>
+                </div>
+                <div class="proto-label">Respuesta pedagógica</div>
+              </div>
+              <div class="proto-grid thumbs-2">
+                <div class="proto-item">
+                  <div class="proto-screenshot">
+                    <img src="assets/prototype-home.png" alt="Pantalla inicial"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="proto-placeholder" style="display:none">Captura pendiente</div>
+                  </div>
+                  <div class="proto-label">Pantalla inicial</div>
+                </div>
+                <div class="proto-item">
+                  <div class="proto-screenshot">
+                    <img src="assets/prototype-topic.png" alt="Selección de tema"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="proto-placeholder" style="display:none">Captura pendiente</div>
+                  </div>
+                  <div class="proto-label">Selección de tema</div>
+                </div>
+                <div class="proto-item">
+                  <div class="proto-screenshot">
+                    <img src="assets/prototype-help.png" alt="Selección del tipo de ayuda"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="proto-placeholder" style="display:none">Captura pendiente</div>
+                  </div>
+                  <div class="proto-label">Selección del tipo de ayuda</div>
+                </div>
+                <div class="proto-item">
+                  <div class="proto-screenshot">
+                    <img src="assets/prototype-progress.png" alt="Progreso y recomendación"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="proto-placeholder" style="display:none">Captura pendiente</div>
+                  </div>
+                  <div class="proto-label">Progreso y recomendación</div>
+                </div>
+              </div>
+            </div>
+            <p class="proto-note fragment" style="text-align:center; margin-top:6px;">Las capturas evidencian el flujo funcional del prototipo.</p>
+            <p class="proto-note fragment" style="text-align:center; margin-top:2px; font-size:13px;">Capturas reales del prototipo, sin datos personales de participantes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 13: DISEÑO DE VALIDACIÓN ────────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Validación</div>
+            <h2 class="slide-title">Diseño de Validación</h2>
+            <div class="ac-cols fragment">
+              <div class="ac-box">
+                <strong>Grupo control — E01 a E10</strong>
+                10 participantes. Recursos habituales de autoestudio.
+                <div class="mini-flow">
+                  <span class="mini-flow-step">Pretest</span>
+                  <span class="mini-flow-arrow">→</span>
+                  <span class="mini-flow-step">Autoestudio</span>
+                  <span class="mini-flow-arrow">→</span>
+                  <span class="mini-flow-step">Postest</span>
+                </div>
+              </div>
+              <div class="ac-box">
+                <strong>Grupo experimental — E11 a E20</strong>
+                10 participantes. Uso del tutor Coach.
+                <div class="mini-flow">
+                  <span class="mini-flow-step">Pretest</span>
+                  <span class="mini-flow-arrow">→</span>
+                  <span class="mini-flow-step">Uso de Coach</span>
+                  <span class="mini-flow-arrow">→</span>
+                  <span class="mini-flow-step">Postest</span>
+                </div>
+              </div>
+            </div>
+            <div class="kw-tags center fragment" style="margin-top:12px;">
+              <span class="kw-tag">Rúbrica</span>
+              <span class="kw-tag">Registro de tiempo</span>
+              <span class="kw-tag">Likert: grupo experimental</span>
+              <span class="kw-tag">t de Welch</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 14: RESULTADOS PRINCIPALES ──────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Resultados</div>
+            <h2 class="slide-title">Resultados Principales</h2>
+            <div class="callout-row fragment">
+              <div class="callout-box">
+                <span class="callout-label">Mejora promedio</span>
+                <span class="callout-value"><span class="callout-exp">+4.50</span><span class="callout-vs">vs</span><span class="callout-ctrl">+1.80</span></span>
+              </div>
+              <div class="callout-box">
+                <span class="callout-label">Problemas correctos</span>
+                <span class="callout-value"><span class="callout-exp">+1.40</span><span class="callout-vs">vs</span><span class="callout-ctrl">+0.70</span></span>
+              </div>
+              <div class="callout-box">
+                <span class="callout-label">Reducción de tiempo (min)</span>
+                <span class="callout-value"><span class="callout-exp">7.40</span><span class="callout-vs">vs</span><span class="callout-ctrl">2.10</span></span>
+              </div>
+            </div>
+            <div class="fragment">
+              <table class="data-table" style="margin-bottom:8px;">
+                <thead><tr><th>Indicador</th><th>Control</th><th>Experimental</th></tr></thead>
+                <tbody>
+                  <tr><td>Pretest promedio</td><td>15.30</td><td>15.30</td></tr>
+                  <tr><td>Postest promedio</td><td>17.10</td><td><strong>19.80</strong></td></tr>
+                  <tr class="highlight-row"><td>Mejora promedio</td><td>1.80</td><td>4.50</td></tr>
+                </tbody>
+              </table>
+              <div class="bar-compare">
+                <div class="bar-group">
+                  <div class="bar-group-label">Control</div>
+                  <div class="bar-track"><div class="bar-fill" style="width:40%">1.80 pts</div></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-group-label">Experimental</div>
+                  <div class="bar-track"><div class="bar-fill exp" style="width:100%">4.50 pts</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="fragment" style="margin-top:12px;">
+              <p class="col-label">Reducción de tiempo de resolución</p>
+              <div class="bar-compare" style="margin-top:4px;">
+                <div class="bar-group">
+                  <div class="bar-group-label">Control</div>
+                  <div class="bar-track"><div class="bar-fill" style="width:28%">2.10 min</div></div>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-group-label">Experimental</div>
+                  <div class="bar-track"><div class="bar-fill exp" style="width:100%">7.40 min</div></div>
+                </div>
+              </div>
+            </div>
+            <p class="proto-note" style="text-align:center; margin-top:8px;">Percepción experimental favorable: utilidad 4.10 / satisfacción 4.05.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 15: PRUEBA ESTADÍSTICA ──────────────────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Resultados</div>
+            <h2 class="slide-title">Prueba Estadística</h2>
+            <p class="proto-note" style="text-align:center; margin-top:-2px; margin-bottom:6px;">Prueba aplicada sobre la mejora de puntaje: postest − pretest.</p>
+            <table class="data-table fragment">
+              <thead><tr><th>Prueba t de Welch</th><th>Valor</th></tr></thead>
+              <tbody>
+                <tr><td>Nivel de confianza</td><td>95% (α = 0.05)</td></tr>
+                <tr><td>Mejora — Control</td><td>1.80</td></tr>
+                <tr><td>Mejora — Experimental</td><td>4.50</td></tr>
+              </tbody>
+            </table>
+            <div class="ac-cols thirds fragment" style="margin-top:10px;">
+              <div class="stat-item">
+                <span class="stat-value">4.1498</span>
+                <span class="stat-label">t calculado</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">2.1059</span>
+                <span class="stat-label">t crítico</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">0.000640</span>
+                <span class="stat-label">p-valor bilateral</span>
+              </div>
+            </div>
+            <div class="ac-box fragment" style="margin-top:10px; border-color:#2f855a; background:#f0fff4;">
+              p = 0.000640 &lt; 0.05 → <strong style="color:#c53030;">se rechaza H₀.</strong><br>
+              t = 4.1498 &gt; 2.1059 → <strong style="color:#c53030;">diferencia significativa.</strong>
+            </div>
+            <p class="proto-note fragment" style="text-align:center; margin-top:6px;">La mejora observada respalda la hipótesis con 95% de confianza.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 16: CONCLUSIONES Y RECOMENDACIONES ──────────────── -->
+      <section class="slide-inner">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Cierre</div>
+            <h2 class="slide-title">Conclusiones y Recomendaciones</h2>
+            <div class="mini-flow fragment">
+              <span class="mini-flow-step">Problema</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Coach</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Evidencia</span>
+              <span class="mini-flow-arrow">→</span>
+              <span class="mini-flow-step">Conclusión</span>
+            </div>
+            <div class="ac-cols">
+              <div class="fragment">
+                <p class="col-label">Conclusiones</p>
+                <ul>
+                  <li>Se diagnosticó la preparación poco estructurada.</li>
+                  <li>Se diseñó una arquitectura multiagente con tres agentes.</li>
+                  <li>Se construyó un prototipo funcional de tutoría pedagógica.</li>
+                  <li>Se validó una mejora significativa en el grupo experimental.</li>
+                </ul>
+              </div>
+              <div class="fragment">
+                <p class="col-label">Recomendaciones</p>
+                <div class="kw-tags">
+                  <span class="kw-tag">Ampliar banco de problemas</span>
+                  <span class="kw-tag">Incorporar nuevos temas</span>
+                  <span class="kw-tag">Pruebas con muestras mayores</span>
+                  <span class="kw-tag">Mejorar seguimiento del progreso</span>
+                </div>
+                <p style="font-size:16px; color:#51637a; font-style:italic; margin-top:8px;">Las integraciones futuras se consideran solo como trabajo posterior.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 17: GRACIAS ──────────────────────────────────────── -->
+      <section class="slide-inner thanks-slide">
+        <div class="slide-content">
+          <div class="fit-content">
+            <div class="slide-subtitle">Cierre</div>
+            <h2 class="slide-title">Gracias</h2>
+            <p class="cover-subtitle" style="text-align:center;">Coach como apoyo pedagógico para una preparación algorítmica más estructurada.</p>
+            <div class="ac-box fragment" style="text-align:center; margin-top:24px;">
+              <strong>¿Preguntas?</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /slides -->
+  </div><!-- /reveal -->
+
+  <!-- CUSTOM CONTROLS -->
+  <div id="ac-controls" class="custom-controls">
+    <button id="btn-prev" title="Anterior (←)">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="10,3 5,8 10,13"/>
+      </svg>
+      Anterior
+    </button>
+    <button id="btn-next" title="Siguiente (→)">
+      Siguiente
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6,3 11,8 6,13"/>
+      </svg>
+    </button>
+    <button id="btn-fs" title="Pantalla completa (F)">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <polyline points="1,5 1,1 5,1"/><polyline points="11,1 15,1 15,5"/>
+        <polyline points="15,11 15,15 11,15"/><polyline points="5,15 1,15 1,11"/>
+      </svg>
+      Pantalla completa
+    </button>
+    <button id="btn-pdf" title="Exportar PDF completo">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="1" width="10" height="14" rx="1"/>
+        <line x1="5" y1="5" x2="9" y2="5"/>
+        <line x1="5" y1="8" x2="9" y2="8"/>
+        <line x1="5" y1="11" x2="7" y2="11"/>
+      </svg>
+      PDF
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="ac-footer">
+    <div class="f-left">
+      Luis David Ajhuacho Tarquino<br>© 2026
+    </div>
+    <div class="f-right">
+      Universidad Mayor de San Andrés
+    </div>
+  </div>
+
+  <!-- PDF OVERLAY -->
+  <div id="pdf-overlay">
+    <div class="pdf-overlay-box">
+      <div class="pdf-overlay-title">Exportando PDF</div>
+      <div class="pdf-progress-wrap">
+        <div id="pdf-progress-bar" class="pdf-progress-fill"></div>
+      </div>
+      <div id="pdf-progress-text" class="pdf-progress-text">Preparando... 0%</div>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="dist/plugin/notes.js"></script>
+  <script src="dist/plugin/markdown.js"></script>
+  <script src="dist/plugin/highlight.js"></script>
+
+  <script>
+    // ── Reveal init ──────────────────────────────────────────────
+    Reveal.initialize({
+      hash: true,
+      center: false,
+      controls: false,
+      progress: false,
+      slideNumber: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
+      transition: 'slide',
+      transitionSpeed: 'fast',
+      keyboard: true,
+      overview: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+
+    // ── Slide counter ────────────────────────────────────────────
+    const slideLabel = document.getElementById('ac-slide-label');
+    function updateSlideLabel() {
+      const idx   = Reveal.getIndices();
+      const total = Reveal.getTotalSlides();
+      slideLabel.textContent = 'Diapositiva ' + (idx.h + 1) + ' / ' + total;
+    }
+    Reveal.on('slidechanged', updateSlideLabel);
+    Reveal.on('slidechanged', function() {
+      fitSlideText();
+      setTimeout(fitSlideText, 150);
+    });
+    Reveal.on('ready', function() {
+      updateSlideLabel();
+      setTimeout(fitSlideText, 150);
+      setTimeout(fitSlideText, 500);
+    });
+    window.addEventListener('load', function() { setTimeout(fitSlideText, 100); });
+    window.addEventListener('resize', fitSlideText);
+
+    // ── Navigation ───────────────────────────────────────────────
+    document.getElementById('btn-prev').addEventListener('click', function() { Reveal.prev(); });
+    document.getElementById('btn-next').addEventListener('click', function() { Reveal.next(); });
+
+    // ── Fullscreen ───────────────────────────────────────────────
+    function isFullscreen() {
+      return !!(
+        document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.msFullscreenElement
+      );
+    }
+
+    function updateFullscreenState() {
+      var fullscreen = isFullscreen();
+      document.body.classList.toggle('fullscreen-mode', fullscreen);
+      document.documentElement.classList.toggle('fullscreen-mode', fullscreen);
+
+      var controls = document.querySelector('.custom-controls');
+      if (controls) {
+        if (fullscreen) {
+          controls.classList.add('fullscreen-hidden');
+          controls.style.display = 'none';
+          controls.style.visibility = 'hidden';
+          controls.style.opacity = '0';
+          controls.style.pointerEvents = 'none';
+        } else {
+          controls.classList.remove('fullscreen-hidden');
+          controls.style.display = '';
+          controls.style.visibility = '';
+          controls.style.opacity = '';
+          controls.style.pointerEvents = '';
+        }
+      }
+
+      var btn = document.getElementById('btn-fs');
+      if (btn) {
+        if (fullscreen) {
+          btn.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6,1 1,1 1,6"/><polyline points="10,1 15,1 15,6"/><polyline points="15,10 15,15 10,15"/><polyline points="1,10 1,15 6,15"/></svg> Salir pantalla';
+        } else {
+          btn.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1,5 1,1 5,1"/><polyline points="11,1 15,1 15,5"/><polyline points="15,11 15,15 11,15"/><polyline points="5,15 1,15 1,11"/></svg> Pantalla completa';
+        }
+      }
+    }
+
+    async function toggleFullscreen() {
+      var element = document.documentElement;
+      try {
+        if (!isFullscreen()) {
+          if (element.requestFullscreen) {
+            await element.requestFullscreen({ navigationUI: 'hide' });
+          } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+          } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        }
+      } catch (e) {
+        console.error('[Fullscreen]', e);
+      }
+      setTimeout(updateFullscreenState, 100);
+    }
+
+    document.getElementById('btn-fs').addEventListener('click', toggleFullscreen);
+    document.addEventListener('fullscreenchange',       updateFullscreenState);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenState);
+    document.addEventListener('msfullscreenchange',     updateFullscreenState);
+
+    // ── fitSlideText ─────────────────────────────────────────────
+    // 4 niveles de degradación antes de admitir overflow irrecuperable:
+    //  1. .dense-slide   — compacta line-height/márgenes/gaps (CSS)
+    //  2. .very-dense-slide — segunda pasada de compactación (CSS)
+    //  3. reducir font-size de .fit-content hasta un mínimo legible
+    //  4. --slide-content-scale (transform) hasta 0.82 como último recurso
+    // Si tras los 4 niveles sigue habiendo overflow, se marca
+    // .content-overflow-warning y se advierte en consola (no se corta).
+    function fitSlideText() {
+      document.querySelectorAll('.reveal .slides > section').forEach(function(section, idx) {
+        var fitEl     = section.querySelector('.fit-content');
+        var container = section.querySelector('.slide-content, .cover-content');
+
+        section.classList.remove('dense-slide', 'very-dense-slide', 'content-overflow-warning', 'needs-layout-fix', 'slide-sparse');
+        if (fitEl) {
+          fitEl.style.removeProperty('font-size');
+          fitEl.style.removeProperty('--slide-content-scale');
+        }
+        if (!fitEl || !container) return;
+        if (container.clientHeight < 20) return;
+
+        function available() {
+          var cs = getComputedStyle(container);
+          return container.clientHeight
+            - parseFloat(cs.paddingTop)
+            - parseFloat(cs.paddingBottom);
+        }
+        function overflows() {
+          return fitEl.scrollHeight > available() + 4;
+        }
+        // fitEl tiene flex:1, así que su scrollHeight normalmente IGUALA
+        // la altura del contenedor (la caja se estira aunque el contenido
+        // real sea corto). Para saber cuánto contenido real hay (y así
+        // detectar slides "sparse"), se mide el borde inferior del último
+        // hijo respecto al borde superior de fitEl — eso sí refleja el
+        // contenido renderizado, no la caja estirada.
+        function naturalContentHeight() {
+          if (!fitEl.lastElementChild) return fitEl.scrollHeight;
+          var top = fitEl.getBoundingClientRect().top;
+          var bottom = fitEl.lastElementChild.getBoundingClientRect().bottom;
+          return Math.max(bottom - top, 0) || fitEl.scrollHeight;
+        }
+
+        if (!overflows()) {
+          // Slide con poco contenido: centrar verticalmente y dar más
+          // aire a cards/gaps (.slide-sparse, CSS). No se usa escala
+          // (--slide-content-scale) para crecer: combinada con el ancho
+          // compensado para el caso de encogido, un origin centrado
+          // desplaza el contenido y lo recorta por el borde izquierdo.
+          var avail = available();
+          var contentH = naturalContentHeight();
+          var fillRatio = contentH / avail;
+          if (fillRatio < 0.85) {
+            section.classList.add('slide-sparse');
+          }
+          return;
+        }
+
+        // Nivel 1: dense-slide
+        section.classList.add('dense-slide');
+        if (!overflows()) return;
+
+        // Nivel 2: very-dense-slide
+        section.classList.add('very-dense-slide');
+        if (!overflows()) return;
+
+        // Nivel 3: reducir font-size de .fit-content
+        var naturalSize = parseFloat(getComputedStyle(fitEl).fontSize);
+        var isCover = section.classList.contains('slide-cover');
+        var minSize = isCover ? 36 : 26;
+
+        var ratio = available() / fitEl.scrollHeight;
+        var size  = Math.max(naturalSize * ratio * 0.97, minSize);
+        fitEl.style.fontSize = size + 'px';
+
+        for (var i = 0; i < 80; i++) {
+          if (!overflows()) break;
+          if (size <= minSize + 0.3) break;
+          size = Math.max(size - 0.4, minSize);
+          fitEl.style.fontSize = size + 'px';
+        }
+        if (!overflows()) return;
+
+        // Nivel 4: escala global del contenido vía --slide-content-scale.
+        // scrollHeight no cambia con transform:scale (el transform actúa
+        // en pintado, no en layout), así que el factor se calcula
+        // aritméticamente en vez de iterar comprobando overflows().
+        var neededScale = available() / fitEl.scrollHeight;
+        var scale = Math.max(0.82, Math.min(1, neededScale * 0.98));
+        fitEl.style.setProperty('--slide-content-scale', scale);
+
+        if (neededScale * 0.98 >= 0.82) return;
+
+        // Irrecuperable: no se corta, se advierte
+        section.classList.add('content-overflow-warning', 'needs-layout-fix');
+        console.warn('[fitSlideText] Diapositiva ' + (idx + 1) +
+          ' tiene demasiado contenido incluso al tamaño mínimo de fuente.');
+      });
+    }
+
+    // ── auditSlideOverflow ──────────────────────────────────────
+    // Auditoría independiente de fitSlideText(): mide overflow real
+    // (scrollHeight/scrollWidth y boundingClientRect de hijos) contra
+    // el área segura de cada slide y reporta en consola. No modifica
+    // estilos — solo diagnostica y marca .has-overflow.
+    function auditSlideOverflow() {
+      var report = [];
+      var sections = document.querySelectorAll('.reveal .slides > section');
+      var total = sections.length;
+
+      sections.forEach(function(section, idx) {
+        section.classList.remove('has-overflow');
+
+        var fitEl     = section.querySelector('.fit-content');
+        var container = section.querySelector('.slide-content, .cover-content');
+        if (!fitEl || !container) return;
+        if (container.clientHeight < 20) return;
+
+        var titleEl = section.querySelector('.slide-title, .section-title, .cover-title');
+        var title   = titleEl ? titleEl.textContent.trim().slice(0, 60) : '(sin título)';
+
+        var containerRect = container.getBoundingClientRect();
+        var safeTop    = containerRect.top;
+        var safeBottom = containerRect.bottom;
+        var safeLeft   = containerRect.left;
+        var safeRight  = containerRect.right;
+
+        var cs = getComputedStyle(container);
+        var availableH = container.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+        var vOverflow = Math.max(0, fitEl.scrollHeight - availableH);
+        var hOverflow = Math.max(0, fitEl.scrollWidth - fitEl.clientWidth);
+
+        var culprit = null;
+        var maxBottomExcess = 0;
+        var maxRightExcess  = 0;
+
+        fitEl.querySelectorAll('*').forEach(function(el) {
+          var r = el.getBoundingClientRect();
+          if (r.width === 0 && r.height === 0) return;
+          var bottomExcess = r.bottom - safeBottom;
+          var rightExcess  = r.right - safeRight;
+          var topDeficit   = safeTop - r.top;
+          if (bottomExcess > maxBottomExcess) { maxBottomExcess = bottomExcess; culprit = el; }
+          if (rightExcess > maxRightExcess)   { maxRightExcess = rightExcess; culprit = culprit || el; }
+          if (topDeficit > 2 && !culprit) { culprit = el; }
+        });
+
+        var hasOverflow = vOverflow > 1 || hOverflow > 1 || maxBottomExcess > 1 || maxRightExcess > 1;
+
+        if (hasOverflow) {
+          section.classList.add('has-overflow');
+          var entry = {
+            slide: (idx + 1) + ' / ' + total,
+            title: title,
+            verticalOverflow: Math.round(Math.max(vOverflow, maxBottomExcess)),
+            horizontalOverflow: Math.round(Math.max(hOverflow, maxRightExcess)),
+            culprit: culprit
+          };
+          report.push(entry);
+          console.warn('[OVERFLOW]', entry);
+        }
+      });
+
+      if (report.length === 0) {
+        console.info('[auditSlideOverflow] Sin overflow detectado en ' + total + ' diapositivas.');
+      } else {
+        console.warn('[auditSlideOverflow] ' + report.length + ' diapositiva(s) con overflow de ' + total + '.');
+      }
+      return report;
+    }
+
+    Reveal.on('ready',        function() { setTimeout(auditSlideOverflow, 600); });
+    Reveal.on('slidechanged', function() { setTimeout(auditSlideOverflow, 200); });
+    window.addEventListener('resize', function() { setTimeout(auditSlideOverflow, 250); });
+
+    document.addEventListener('fullscreenchange',       function() { setTimeout(fitSlideText, 200); setTimeout(auditSlideOverflow, 350); });
+    document.addEventListener('webkitfullscreenchange', function() { setTimeout(fitSlideText, 200); setTimeout(auditSlideOverflow, 350); });
+    document.addEventListener('msfullscreenchange',     function() { setTimeout(fitSlideText, 200); setTimeout(auditSlideOverflow, 350); });
+
+    // ── PDF: fragment helpers ────────────────────────────────────
+    function forceFragmentsVisibleForPDF() {
+      document.querySelectorAll('.reveal .slides section .fragment').forEach(function(frag) {
+        // Only save original state once to avoid overwriting on repeated calls
+        if (frag.dataset.pdfOrigClass === undefined) {
+          frag.dataset.pdfOrigClass      = frag.className;
+          frag.dataset.pdfOrigOpacity    = frag.style.opacity;
+          frag.dataset.pdfOrigVisibility = frag.style.visibility;
+          frag.dataset.pdfOrigTransform  = frag.style.transform;
+        }
+        frag.classList.add('visible');
+        frag.classList.remove('current-fragment');
+        frag.style.opacity    = '1';
+        frag.style.visibility = 'visible';
+        frag.style.transform  = 'none';
+        frag.style.display    = '';
+      });
+    }
+
+    function restoreFragmentsAfterPDF() {
+      document.querySelectorAll('.reveal .slides section .fragment').forEach(function(frag) {
+        if (frag.dataset.pdfOrigClass !== undefined) {
+          frag.className        = frag.dataset.pdfOrigClass;
+          frag.style.opacity    = frag.dataset.pdfOrigOpacity    || '';
+          frag.style.visibility = frag.dataset.pdfOrigVisibility || '';
+          frag.style.transform  = frag.dataset.pdfOrigTransform  || '';
+          delete frag.dataset.pdfOrigClass;
+          delete frag.dataset.pdfOrigOpacity;
+          delete frag.dataset.pdfOrigVisibility;
+          delete frag.dataset.pdfOrigTransform;
+        }
+        frag.style.display = '';
+      });
+    }
+
+    // ── PDF Export ───────────────────────────────────────────────
+    async function exportDeckToPDF() {
+      if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
+        alert('Las librerías de PDF no están disponibles. Verifica tu conexión a internet.');
+        return;
+      }
+
+      var overlay    = document.getElementById('pdf-overlay');
+      var progressEl = document.getElementById('pdf-progress-text');
+      var bar        = document.getElementById('pdf-progress-bar');
+
+      document.body.classList.add('exporting-pdf');
+      forceFragmentsVisibleForPDF();
+
+      overlay.style.display = 'flex';
+      progressEl.textContent = 'Preparando... 0%';
+      bar.style.width = '0%';
+
+      var savedIndices = Reveal.getIndices();
+
+      var allSlides = [];
+      document.querySelectorAll('.reveal .slides > section').forEach(function(hSlide, h) {
+        var vSlides = hSlide.querySelectorAll(':scope > section');
+        if (vSlides.length === 0) {
+          allSlides.push([h, 0]);
+        } else {
+          vSlides.forEach(function(_, v) { allSlides.push([h, v]); });
+        }
+      });
+
+      var total = allSlides.length;
+      var jsPDF = window.jspdf.jsPDF;
+      var pdf   = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167.0625] });
+      var pageW = pdf.internal.pageSize.getWidth();
+      var pageH = pdf.internal.pageSize.getHeight();
+
+      try {
+        for (var i = 0; i < total; i++) {
+          var sh = allSlides[i][0];
+          var sv = allSlides[i][1];
+          var pct = Math.round((i / total) * 100);
+          progressEl.textContent = 'Diapositiva ' + (i + 1) + ' de ' + total + '  —  ' + pct + '%';
+          bar.style.width = pct + '%';
+
+          Reveal.slide(sh, sv, -1);
+          await new Promise(function(r) { setTimeout(r, 500); });
+
+          fitSlideText();
+          forceFragmentsVisibleForPDF();
+          fitSlideText();
+          auditSlideOverflow();
+
+          var currentSection = document.querySelector('.reveal .slides > section.present');
+          if (currentSection && currentSection.classList.contains('needs-layout-fix')) {
+            console.warn('[PDF Export] Diapositiva ' + (i + 1) + ' de ' + total +
+              ' tiene overflow irrecuperable y se exportará con contenido excedido.');
+          }
+
+          overlay.style.display = 'none';
+          await new Promise(function(r) { setTimeout(r, 100); });
+
+          var canvas = await html2canvas(document.body, {
+            scale: 2,
+            useCORS: true,
+            allowTaint: true,
+            logging: false,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            scrollX: 0,
+            scrollY: 0,
+            backgroundColor: '#ffffff',
+          });
+
+          overlay.style.display = 'flex';
+
+          if (i > 0) pdf.addPage([297, 167.0625], 'landscape');
+          pdf.addImage(canvas.toDataURL('image/jpeg', 0.88), 'JPEG', 0, 0, pageW, pageH);
+        }
+
+        progressEl.textContent = 'Completado — descargando...';
+        bar.style.width = '100%';
+        await new Promise(function(r) { setTimeout(r, 400); });
+        pdf.save('defensa-tesis-grado.pdf');
+
+      } catch (err) {
+        console.error('[PDF Export]', err);
+        alert('Error al exportar PDF: ' + err.message);
+      } finally {
+        await new Promise(function(r) { setTimeout(r, 300); });
+        restoreFragmentsAfterPDF();
+        Reveal.slide(savedIndices.h, savedIndices.v, savedIndices.f);
+        document.body.classList.remove('exporting-pdf');
+        overlay.style.display = 'none';
+        bar.style.width = '0%';
+      }
+    }
+
+    document.getElementById('btn-pdf').addEventListener('click', exportDeckToPDF);
+  </script>
+</body>
+</html>
