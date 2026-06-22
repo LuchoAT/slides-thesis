@@ -85,3 +85,4 @@ Thumbs.db
 # SVN metadata
 
 .svn/
+.vercel
