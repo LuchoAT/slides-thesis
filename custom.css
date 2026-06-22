@@ -1410,7 +1410,7 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 .proto-screenshot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -1457,17 +1457,51 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
   font-family: 'Arial', sans-serif;
 }
 
-/* ── Prototipo: captura principal + grid de miniaturas ───────── */
+/* ── Prototipo: collage captura principal + grid de miniaturas ── */
+.proto-collage {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+  margin-top: 10px;
+  align-items: start;
+}
+
 .proto-screenshot.proto-main {
-  min-height: 280px;
+  min-height: 0;
+  aspect-ratio: 5 / 3;
+  max-height: 300px;
 }
 
 .proto-grid.thumbs-2 {
   grid-template-columns: repeat(2, 1fr);
+  align-content: start;
+}
+
+.proto-grid.thumbs-2 .proto-screenshot {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  max-height: 140px;
+}
+
+.dense-slide .proto-collage {
+  gap: 10px !important;
+  margin-top: 6px !important;
 }
 
 .dense-slide .proto-screenshot.proto-main {
-  min-height: 200px;
+  max-height: 190px !important;
+}
+
+.dense-slide .proto-grid.thumbs-2 .proto-screenshot {
+  max-height: 88px !important;
+}
+
+.very-dense-slide .proto-screenshot.proto-main {
+  max-height: 150px !important;
+}
+
+.very-dense-slide .proto-grid.thumbs-2 .proto-screenshot {
+  max-height: 68px !important;
 }
 
 /* ── Objective cards (slide: Objetivos Específicos) ──────────── */
