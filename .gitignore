@@ -1,60 +1,30 @@
 # Dependencies
-
 node_modules/
 
 # Local/private config
-
 .env
 .env.local
 .env.*.local
 .vercel/
 
 # Claude local/private files
-
 .claude/
 CLAUDE.md
 
 # Build/generated outputs
-
+dist/
 build/
 out/
 presentation/
 presentation.zip
 
-# Reveal.js source/template folders not needed for thesis slides
-
-.github/
-examples/
-react/
-scripts/
-test/
-js/
-css/
-
 # Backup/demo files
-
 demo.html
 dev.html
 index.backup.html
 custom.backup.css
 
-# Tooling/config files not needed for thesis presentation
-
-.codespellrc
-.prettierignore
-.prettierrc
-tsconfig.json
-tsconfig.node.json
-vite.config.styles.ts
-
-# Plugin source/config files not needed
-
-plugin/**/*.ts
-plugin/**/vite.config.ts
-plugin/**/speaker-view.html
-
 # Logs
-
 *.log
 log/*.log
 npm-debug.log*
@@ -63,19 +33,16 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Cache/temp
-
 .sass-cache/
 .cache/
 .tmp/
 tmp/
 
 # OS files
-
 .DS_Store
 Thumbs.db
 
 # IDE/editor
-
 .idea/
 .vscode/
 *.iml
@@ -83,6 +50,4 @@ Thumbs.db
 *.eml
 
 # SVN metadata
-
 .svn/
-.vercel
