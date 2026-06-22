@@ -1119,12 +1119,18 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 6px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: 'Arial', sans-serif;
 }
 
 .cause-flow-col.central .cf-label {
   color: rgba(255,255,255,0.7);
+}
+
+.cause-flow-col.central .cf-label .card-icon {
+  color: rgba(255,255,255,0.85);
 }
 
 .cause-flow-col .cf-central-text {
@@ -1191,6 +1197,9 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
   letter-spacing: 0.08em;
   margin-bottom: 6px;
   font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .flow-box ul {
@@ -1422,9 +1431,22 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
   gap: 4px;
 }
 
-.proto-placeholder::before {
-  content: "📷";
-  font-size: 1.4em;
+.proto-placeholder-icon {
+  width: 30px;
+  height: 30px;
+  color: #9fb0d0;
+  flex-shrink: 0;
+}
+
+.proto-placeholder-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
 }
 
 .proto-note {
@@ -1805,10 +1827,22 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 /* ── Agent icon (slide: Organización Multiagente) ──────────────── */
 .agent-icon {
   display: block;
-  font-size: 22px;
+  width: 26px;
+  height: 26px;
   color: var(--ac-accent);
   margin-bottom: 4px;
   line-height: 1;
+}
+
+.agent-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
 }
 
 /* ── Prototipo: contenedor captura + etiqueta visible ──────────── */
@@ -1897,10 +1931,278 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 .dense-slide .callout-box { padding: 6px 10px !important; }
 .dense-slide .callout-exp { font-size: 20px !important; }
 .dense-slide .callout-ctrl { font-size: 15px !important; }
-.dense-slide .agent-icon { font-size: 18px !important; margin-bottom: 2px !important; }
+.dense-slide .agent-icon { width: 18px !important; height: 18px !important; margin-bottom: 2px !important; }
 .dense-slide .context-badge { padding: 3px 9px !important; font-size: 12px !important; margin-bottom: 6px !important; }
 
 .very-dense-slide .mini-flow-step { font-size: 0.85em; }
 .very-dense-slide .xy-box { font-size: 0.85em; }
 .very-dense-slide .callout-exp { font-size: 0.78em; }
 .very-dense-slide .callout-ctrl { font-size: 0.78em; }
+
+/* ============================================================
+   ICONOGRAFÍA Y DIAGRAMAS — sistema Coach
+   ============================================================ */
+
+/* ── Icono SVG inline genérico ───────────────────────────────── */
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--ac-accent);
+}
+
+.card-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+/* Encabezado de tarjeta: icono + título, usado dentro de .ac-box */
+.ac-box .card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ac-box .card-head strong {
+  margin-bottom: 0 !important;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Icono de fase dentro del timeline horizontal ────────────── */
+.tl-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto 5px;
+  color: var(--ac-accent);
+}
+
+.tl-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+/* ── Flow row: variante de 4 etapas (slides 9, 11) ─────────────── */
+.flow-row.four {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 8px;
+}
+
+.flow-row.four .flow-box {
+  padding: 10px 10px;
+}
+
+.flow-row.four .flow-label {
+  font-size: 13px;
+}
+
+.flow-row.four .flow-box ul li {
+  font-size: 14px;
+}
+
+/* CrewAI: misma forma de flow-box, distinguida como capa técnica */
+.flow-box.crewai-box {
+  background: #eef3fc;
+  border-top-color: var(--ac-blue);
+  border-style: dashed;
+  border-top-style: solid;
+}
+
+/* ── Conectores simples entre bloques del diagrama ───────────── */
+.diagram-down-arrow {
+  text-align: center;
+  font-size: 20px;
+  color: var(--ac-accent);
+  font-weight: 900;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+.diagram-branch-label {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ac-blue);
+  margin: 2px 0 6px;
+  font-family: 'Arial', sans-serif;
+}
+
+.diagram-branch-3 {
+  display: flex;
+  justify-content: space-around;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--ac-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* ── Etiqueta superior "Sistema Coach" centrada ──────────────── */
+.diagram-top-wrap {
+  text-align: center;
+}
+
+.diagram-top-label {
+  display: inline-block;
+  background: var(--ac-blue);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ── Capa técnica CrewAI (slide: Organización Multiagente) ───── */
+.crewai-layer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #eef3fc;
+  border: 1.5px dashed var(--ac-accent);
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.crewai-layer .card-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.crewai-layer strong {
+  display: block;
+  color: var(--ac-blue);
+  font-size: 17px;
+  font-family: 'Arial', sans-serif;
+}
+
+.crewai-layer .crewai-note {
+  font-size: 14px;
+  color: #51637a;
+  font-style: italic;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ── Ramas de decisión a/b/c (slide: Flujo de interacción) ───── */
+.branch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.branch-lane {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.branch-tag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--ac-blue);
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.branch-lane p {
+  font-size: 14px;
+  color: #2d3748;
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+.branch-arrow {
+  font-size: 16px;
+  color: var(--ac-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* ── Agent box compacta (usada en diagramas, no como tarjeta principal) ── */
+.agent-box.mini {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.agent-box.mini .agent-icon {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 4px;
+}
+
+.agent-box.mini .agent-name {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* ── Icono dentro de callout oscuro: invertir a blanco ───────── */
+.callout-box .card-icon {
+  color: rgba(255,255,255,0.85);
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 4px;
+}
+
+/* ── Icono dentro de stat-item ────────────────────────────────── */
+.stat-item .card-icon {
+  color: var(--ac-accent);
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 6px;
+}
+
+/* ── Dense overrides para iconografía y diagramas ────────────── */
+.dense-slide .card-icon { width: 16px !important; height: 16px !important; }
+.dense-slide .ac-box .card-head { gap: 6px !important; margin-bottom: 2px !important; }
+.dense-slide .tl-icon { width: 14px !important; height: 14px !important; margin-bottom: 3px !important; }
+.dense-slide .flow-row.four { gap: 5px !important; }
+.dense-slide .flow-row.four .flow-box { padding: 6px 7px !important; }
+.dense-slide .diagram-down-arrow { margin: 2px 0 !important; font-size: 16px !important; }
+.dense-slide .diagram-branch-label { margin: 1px 0 4px !important; font-size: 12px !important; }
+.dense-slide .crewai-layer { padding: 6px 12px !important; gap: 10px !important; }
+.dense-slide .crewai-layer .card-icon { width: 20px !important; height: 20px !important; }
+.dense-slide .crewai-layer strong { font-size: 14px !important; }
+.dense-slide .crewai-layer .crewai-note { font-size: 12px !important; }
+.dense-slide .branch-grid { gap: 8px !important; }
+.dense-slide .branch-lane p { font-size: 12px !important; }
+.dense-slide .agent-box.mini { padding: 5px 7px !important; }
+.dense-slide .agent-box.mini .agent-name { font-size: 12px !important; }
+.dense-slide .agent-box.mini .agent-icon { width: 16px !important; height: 16px !important; }
+.dense-slide .diagram-top-label { font-size: 12px !important; padding: 4px 12px !important; }
+.dense-slide .stat-item .card-icon { width: 16px !important; height: 16px !important; margin-bottom: 3px !important; }
+
+.very-dense-slide .flow-row.four .flow-label { font-size: 0.85em; }
+.very-dense-slide .branch-lane p { font-size: 0.85em; }
+.very-dense-slide .crewai-layer .crewai-note { font-size: 0.85em; }
