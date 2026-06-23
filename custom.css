@@ -1460,7 +1460,7 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 /* ── Prototipo: collage captura principal + grid de miniaturas ── */
 .proto-collage {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: 16px;
   margin-top: 10px;
   align-items: start;
@@ -1480,7 +1480,8 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 .proto-grid.thumbs-2 .proto-screenshot {
   min-height: 0;
   aspect-ratio: 4 / 3;
-  max-height: 140px;
+  height: 188px;
+  max-height: 188px;
 }
 
 .dense-slide .proto-collage {
@@ -1493,7 +1494,7 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 }
 
 .dense-slide .proto-grid.thumbs-2 .proto-screenshot {
-  max-height: 88px !important;
+  max-height: 104px !important;
 }
 
 .very-dense-slide .proto-screenshot.proto-main {
@@ -1501,7 +1502,82 @@ body.exporting-pdf .reveal .slides section .fragment.current-fragment {
 }
 
 .very-dense-slide .proto-grid.thumbs-2 .proto-screenshot {
-  max-height: 68px !important;
+  max-height: 80px !important;
+}
+
+/* ── Prototipo Funcional: layout asimétrico exclusivo de esta slide.
+   Cada miniatura usa el aspect-ratio real de su captura (en vez de un
+   recuadro fijo) para eliminar el letterboxing y que la imagen real
+   ocupe el máximo posible de su tarjeta. La columna de miniaturas es
+   deliberadamente más ancha que la principal (0.95fr vs 1.35fr) para
+   maximizar el tamaño real renderizado de las 4 capturas secundarias,
+   con un recorte mínimo (~5%) en la principal. ────────────────────── */
+.prototype-slide .slide-content {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.prototype-slide .proto-collage {
+  grid-template-columns: 0.9fr 1.5fr;
+  gap: 8px;
+  margin-top: 4px;
+  align-items: start;
+}
+
+.prototype-slide .proto-screenshot.proto-main {
+  aspect-ratio: 5 / 3;
+  height: auto;
+  max-height: 460px;
+}
+
+.prototype-slide .proto-grid.thumbs-2 {
+  gap: 5px;
+  align-items: start;
+}
+
+.prototype-slide .slide-subtitle {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.prototype-slide h2.slide-title {
+  margin-bottom: 2px !important;
+  padding-bottom: 6px;
+}
+
+.prototype-slide .proto-label {
+  font-size: 11px;
+}
+
+.prototype-slide .proto-item {
+  gap: 3px;
+}
+
+.prototype-slide .proto-grid.thumbs-2 .proto-screenshot {
+  min-height: 0;
+  height: auto;
+  max-height: none;
+}
+
+/* Aspect-ratio real (ancho x alto) de cada captura, en el orden del
+   grid: Pantalla inicial, Selección de tema, Tipo de ayuda,
+   Progreso y recomendación. */
+.prototype-slide .proto-grid.thumbs-2 .proto-item:nth-child(1) .proto-screenshot { aspect-ratio: 801 / 554; }
+.prototype-slide .proto-grid.thumbs-2 .proto-item:nth-child(2) .proto-screenshot { aspect-ratio: 775 / 291; }
+.prototype-slide .proto-grid.thumbs-2 .proto-item:nth-child(3) .proto-screenshot { aspect-ratio: 791 / 284; }
+.prototype-slide .proto-grid.thumbs-2 .proto-item:nth-child(4) .proto-screenshot { aspect-ratio: 775 / 195; }
+
+.prototype-slide.dense-slide .proto-collage {
+  gap: 8px !important;
+  margin-top: 4px !important;
+}
+
+.prototype-slide.dense-slide .proto-screenshot.proto-main {
+  max-height: 340px !important;
+}
+
+.prototype-slide.very-dense-slide .proto-screenshot.proto-main {
+  max-height: 280px !important;
 }
 
 /* ── Objective cards (slide: Objetivos Específicos) ──────────── */
