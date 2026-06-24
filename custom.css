@@ -722,6 +722,15 @@ body.fullscreen-mode .cover-content {
   font-size: 0.85em;
 }
 
+.very-dense-slide .hyp-box {
+  padding: 5px 9px !important;
+}
+.very-dense-slide .hyp-line {
+  font-size: 0.85em;
+  margin: 2px 0 !important;
+  line-height: 1.25 !important;
+}
+
 .very-dense-slide .ac-cols,
 .very-dense-slide .obj-grid,
 .very-dense-slide .sti-grid {
@@ -954,6 +963,195 @@ body.fullscreen-mode .cover-content {
   margin-top: 4px;
 }
 
+/* ── Hipótesis estadística (slide Prueba Estadística) ─────── */
+.hyp-box {
+  background: rgba(232, 239, 250, 0.55);
+  border: 1px solid #c5d0e8;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-align: left;
+}
+.hyp-line {
+  font-size: 16px;
+  color: #1a3a63;
+  line-height: 1.45;
+  margin: 6px 0;
+}
+.hyp-line strong {
+  color: var(--ac-blue);
+}
+
+/* ── Flujo del cálculo (slide Prueba Estadística, scope único) ── */
+.stats-flow-slide .stats-flow-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+  align-items: stretch;
+}
+.stats-flow-slide .stats-flow-col {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+.stats-flow-slide .stats-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(232, 239, 250, 0.55);
+  border: 1px solid #c5d0e8;
+  border-left: 3px solid var(--ac-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 6px 10px;
+}
+.stats-flow-slide .stats-step-card.wide {
+  background: rgba(232, 239, 250, 0.8);
+}
+.stats-flow-slide .stats-step-num {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--ac-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.stats-flow-slide .stats-step-body {
+  flex: 1;
+  min-width: 0;
+}
+.stats-flow-slide .stats-step-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ac-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+.stats-flow-slide .stats-step-formula {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a3a63;
+  line-height: 1.35;
+}
+.stats-flow-slide .stats-step-formula.small {
+  font-size: 13px;
+}
+.stats-flow-slide .stats-step-formula sub,
+.stats-flow-slide .stats-step-formula sup {
+  font-size: 0.65em;
+}
+.stats-flow-slide .stats-step-formula sub { vertical-align: sub; }
+.stats-flow-slide .stats-step-formula sup { vertical-align: super; }
+.stats-flow-slide .stats-step-note {
+  font-size: 11px;
+  color: #51637a;
+  line-height: 1.25;
+  margin: 2px 0 0;
+}
+
+/* Fórmula de Welch (simbólica y con reemplazo numérico) dentro del paso 4 */
+.stats-flow-slide .math-formula {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a3a63;
+  line-height: 1.15;
+  margin: 2px 0;
+}
+.stats-flow-slide .math-formula.replace {
+  font-size: 13px;
+}
+.stats-flow-slide .math-eq {
+  font-weight: 800;
+  color: var(--ac-blue);
+}
+
+.stats-flow-slide .hypothesis-box {
+  background: rgba(232, 239, 250, 0.55);
+  border: 1px solid #c5d0e8;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: left;
+}
+.stats-flow-slide .hypothesis-box .calc-title {
+  margin-bottom: 2px;
+}
+.stats-flow-slide .hypothesis-box .hyp-line {
+  font-size: 13px;
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+.stats-flow-slide .conclusion-box {
+  margin-top: 8px;
+  text-align: center;
+  background: #f0fff4;
+  border: 1px solid #2f855a;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 15px;
+  color: #1a2a4a;
+  line-height: 1.3;
+}
+.stats-flow-slide .conclusion-box strong {
+  color: #c53030;
+}
+
+/* ── Degradación: dense-slide / very-dense-slide ─────────────── */
+.stats-flow-slide.dense-slide .stats-flow-grid {
+  gap: 7px !important;
+  margin-top: 5px !important;
+}
+.stats-flow-slide.dense-slide .stats-flow-col {
+  gap: 5px !important;
+}
+.stats-flow-slide.dense-slide .stats-step-card {
+  padding: 4px 8px !important;
+}
+.stats-flow-slide.dense-slide .stats-step-note {
+  margin-top: 1px !important;
+}
+.stats-flow-slide.dense-slide .conclusion-box {
+  margin-top: 5px !important;
+  padding: 4px 12px !important;
+}
+
+.stats-flow-slide.very-dense-slide .stats-step-title {
+  font-size: 0.85em;
+}
+.stats-flow-slide.very-dense-slide .stats-step-formula,
+.stats-flow-slide.very-dense-slide .math-formula {
+  font-size: 0.85em;
+}
+.stats-flow-slide.very-dense-slide .stats-step-note {
+  font-size: 0.85em;
+  line-height: 1.15 !important;
+}
+.stats-flow-slide.very-dense-slide .stats-step-num {
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+}
+.stats-flow-slide.very-dense-slide .hypothesis-box .hyp-line {
+  font-size: 0.85em;
+}
+.stats-flow-slide.very-dense-slide .conclusion-box {
+  font-size: 0.88em;
+}
+
 /* ── Keyword tags ─────────────────────────────────────────── */
 .kw-tags {
   display: flex;
@@ -1117,6 +1315,14 @@ body.fullscreen-mode .cover-content {
 .dense-slide .calc-legend {
   font-size: 11px !important;
   margin-top: 2px !important;
+}
+.dense-slide .hyp-box {
+  padding: 6px 10px !important;
+}
+.dense-slide .hyp-line {
+  font-size: 14px !important;
+  margin: 3px 0 !important;
+  line-height: 1.3 !important;
 }
 
 /* ── PDF: force all fragments visible during export ──────────── */

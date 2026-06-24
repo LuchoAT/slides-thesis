@@ -743,60 +743,93 @@
       </section>
 
       <!-- ─── 15: PRUEBA ESTADÍSTICA ──────────────────────────── -->
-      <section class="slide-inner">
+      <section class="slide-inner stats-flow-slide">
         <div class="slide-content">
           <div class="fit-content">
             <div class="slide-subtitle">Resultados</div>
             <h2 class="slide-title">Prueba Estadística</h2>
-            <p class="proto-note" style="text-align:center; margin-top:-2px; margin-bottom:6px;">Prueba aplicada sobre la mejora de puntaje: postest − pretest.</p>
-            <table class="data-table fragment">
-              <thead><tr><th>Prueba t de Welch</th><th>Valor</th></tr></thead>
-              <tbody>
-                <tr><td>Nivel de confianza</td><td>95% (α = 0.05)</td></tr>
-                <tr><td>Mejora — Control</td><td>1.80</td></tr>
-                <tr><td>Mejora — Experimental</td><td>4.50</td></tr>
-              </tbody>
-            </table>
-            <div class="calc-box fragment" style="margin-top:8px;">
-              <div class="calc-title">Cálculo aplicado</div>
-              <div class="calc-section">
-                <span class="calc-section-label">Variable de comparación</span>
-                <div class="calc-formula">Mejora<sub>i</sub> = Postest<sub>i</sub> − Pretest<sub>i</sub></div>
-              </div>
-              <div class="calc-section">
-                <span class="calc-section-label">Prueba t de Welch</span>
-                <div class="calc-formula math-formula-frac">
-                  <span class="math-t">t&nbsp;=</span>
-                  <span class="math-frac">
-                    <span class="math-num">X̄<sub>E</sub> − X̄<sub>C</sub></span>
-                    <span class="math-den"><span class="math-sqrt"><span class="math-sqrt-sym">√</span><span class="math-sqrt-content">s<sub>E</sub><sup>2</sup>/n<sub>E</sub> + s<sub>C</sub><sup>2</sup>/n<sub>C</sub></span></span></span>
-                  </span>
+            <p class="proto-note" style="text-align:center; margin-top:-2px; margin-bottom:6px;">Prueba t de Welch aplicada sobre la mejora de puntaje: postest − pretest.</p>
+
+            <div class="stats-flow-grid">
+              <div class="stats-flow-col">
+                <div class="stats-step-card">
+                  <span class="stats-step-num">1</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Dato base</span>
+                    <div class="stats-step-formula">Mejora<sub>i</sub> = Postest<sub>i</sub> − Pretest<sub>i</sub></div>
+                    <p class="stats-step-note">Se calcula la mejora individual de cada participante.</p>
+                  </div>
+                </div>
+                <div class="stats-step-card">
+                  <span class="stats-step-num">2</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Resumen por grupo</span>
+                    <div class="stats-step-formula small">Control: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;1.80 · s²&nbsp;=&nbsp;1.73</div>
+                    <div class="stats-step-formula small">Experimental: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;4.50 · s²&nbsp;=&nbsp;2.50</div>
+                    <p class="stats-step-note">Las medias y varianzas salen de las mejoras individuales.</p>
+                  </div>
+                </div>
+                <div class="stats-step-card">
+                  <span class="stats-step-num">3</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Diferencia de mejoras</span>
+                    <div class="stats-step-formula">X̄<sub>E</sub> − X̄<sub>C</sub> = 4.50 − 1.80 = <strong>2.70</strong></div>
+                    <p class="stats-step-note">El grupo experimental mejoró 2.70 puntos más.</p>
+                  </div>
+                </div>
+                <div class="hypothesis-box">
+                  <div class="calc-title">Hipótesis estadística</div>
+                  <p class="hyp-line"><strong>H₀:</strong> Coach no produce una mejora significativa frente al grupo control.</p>
+                  <p class="hyp-line"><strong>H₁:</strong> Coach produce una mejora significativa frente al grupo control.</p>
                 </div>
               </div>
-              <div class="calc-legend">E = grupo experimental · C = grupo control · n = 10 por grupo</div>
-            </div>
-            <div class="ac-cols thirds fragment" style="margin-top:10px;">
-              <div class="stat-item">
-                <span class="card-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="20"/><rect x="6" y="13" width="3.4" height="7"/><rect x="11.3" y="8" width="3.4" height="12"/><rect x="16.6" y="4" width="3.4" height="16"/></svg></span>
-                <span class="stat-value">4.1498</span>
-                <span class="stat-label">t calculado</span>
+
+              <div class="stats-flow-col">
+                <div class="stats-step-card wide">
+                  <span class="stats-step-num">4</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">t de Welch</span>
+                    <div class="math-formula">
+                      <span class="math-t">t&nbsp;=</span>
+                      <span class="math-frac">
+                        <span class="math-num">X̄<sub>E</sub> − X̄<sub>C</sub></span>
+                        <span class="math-den"><span class="math-sqrt"><span class="math-sqrt-sym">√</span><span class="math-sqrt-content">s<sub>E</sub><sup>2</sup>/n<sub>E</sub> + s<sub>C</sub><sup>2</sup>/n<sub>C</sub></span></span></span>
+                      </span>
+                    </div>
+                    <div class="math-formula replace">
+                      <span class="math-t">t&nbsp;=</span>
+                      <span class="math-frac">
+                        <span class="math-num">4.50 − 1.80</span>
+                        <span class="math-den"><span class="math-sqrt"><span class="math-sqrt-sym">√</span><span class="math-sqrt-content">2.50/10 + 1.73/10</span></span></span>
+                      </span>
+                      <span class="math-eq">=&nbsp;4.1498</span>
+                    </div>
+                    <div class="calc-legend">E = grupo experimental · C = grupo control · n = 10 por grupo</div>
+                  </div>
+                </div>
+                <div class="stats-step-card">
+                  <span class="stats-step-num">5</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Grados de libertad y p-valor</span>
+                    <div class="stats-step-formula small">gl Welch ≈ 17.43</div>
+                    <div class="stats-step-formula small">p bilateral = 2 · P(T ≥ |4.1498|) = <strong>0.000640</strong></div>
+                    <p class="stats-step-note">El p-valor se obtiene desde la distribución t usando t y gl.</p>
+                  </div>
+                </div>
+                <div class="stats-step-card">
+                  <span class="stats-step-num">6</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Decisión</span>
+                    <div class="stats-step-formula">p&nbsp;=&nbsp;0.000640&nbsp;&lt;&nbsp;0.05 → se rechaza H₀</div>
+                    <p class="stats-step-note">La diferencia es estadísticamente significativa.</p>
+                  </div>
+                </div>
               </div>
-              <div class="stat-item">
-                <span class="card-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="20"/><rect x="6" y="13" width="3.4" height="7"/><rect x="11.3" y="8" width="3.4" height="12"/><rect x="16.6" y="4" width="3.4" height="16"/></svg></span>
-                <span class="stat-value">2.1059</span>
-                <span class="stat-label">t crítico</span>
-              </div>
-              <div class="stat-item">
-                <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><polyline points="8.3,12.3 11,15 16,9.5"/></svg></span>
-                <span class="stat-value">0.000640</span>
-                <span class="stat-label">p-valor bilateral</span>
-              </div>
             </div>
-            <div class="ac-box fragment" style="margin-top:10px; border-color:#2f855a; background:#f0fff4;">
-              p = 0.000640 &lt; 0.05 → <strong style="color:#c53030;">se rechaza H₀.</strong><br>
-              t = 4.1498 &gt; 2.1059 → <strong style="color:#c53030;">diferencia significativa.</strong>
+
+            <div class="conclusion-box">
+              <strong>Se rechaza H₀.</strong> Existe diferencia significativa a favor del grupo experimental.
             </div>
-            <p class="proto-note fragment" style="text-align:center; margin-top:6px;">La mejora observada respalda la hipótesis con 95% de confianza.</p>
           </div>
         </div>
       </section>
