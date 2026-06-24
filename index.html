@@ -647,6 +647,7 @@
           <div class="fit-content">
             <div class="slide-subtitle">Validación</div>
             <h2 class="slide-title">Diseño de Validación</h2>
+            <p class="proto-note" style="text-align:center; margin-top:-2px; margin-bottom:6px;">Muestra: 20 participantes · muestreo intencional no probabilístico.</p>
             <div class="ac-cols fragment">
               <div class="ac-box">
                 <strong>Grupo control — E01 a E10</strong>
@@ -737,7 +738,7 @@
                 </div>
               </div>
             </div>
-            <p class="proto-note" style="text-align:center; margin-top:8px;">Percepción experimental favorable: utilidad 4.10 / satisfacción 4.05.</p>
+            <p class="proto-note" style="text-align:center; margin-top:6px; margin-bottom:0; font-size:14px; line-height:1.25;">Percepción experimental favorable: utilidad 4.10 / satisfacción 4.05.<br>Evidencia favorable dentro del diseño cuasi-experimental.</p>
           </div>
         </div>
       </section>
@@ -755,7 +756,7 @@
                 <div class="stats-step-card">
                   <span class="stats-step-num">1</span>
                   <div class="stats-step-body">
-                    <span class="stats-step-title">Dato base</span>
+                    <span class="stats-step-title">Mejora individual</span>
                     <div class="stats-step-formula">Mejora<sub>i</sub> = Postest<sub>i</sub> − Pretest<sub>i</sub></div>
                     <p class="stats-step-note">Se calcula la mejora individual de cada participante.</p>
                   </div>
@@ -763,18 +764,19 @@
                 <div class="stats-step-card">
                   <span class="stats-step-num">2</span>
                   <div class="stats-step-body">
-                    <span class="stats-step-title">Resumen por grupo</span>
-                    <div class="stats-step-formula small">Control: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;1.80 · s²&nbsp;=&nbsp;1.73</div>
-                    <div class="stats-step-formula small">Experimental: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;4.50 · s²&nbsp;=&nbsp;2.50</div>
-                    <p class="stats-step-note">Las medias y varianzas salen de las mejoras individuales.</p>
+                    <span class="stats-step-title">Media y varianza muestral</span>
+                    <div class="stats-step-formula small">X̄<sub>g</sub> = ΣMejora<sub>i</sub> / n<sub>g</sub></div>
+                    <div class="stats-step-formula small">s²<sub>g</sub> = Σ(Mejora<sub>i</sub> − X̄<sub>g</sub>)² / (n<sub>g</sub> − 1)</div>
+                    <p class="stats-step-note">Se obtienen por grupo (g = control o experimental).</p>
                   </div>
                 </div>
                 <div class="stats-step-card">
                   <span class="stats-step-num">3</span>
                   <div class="stats-step-body">
-                    <span class="stats-step-title">Diferencia de mejoras</span>
-                    <div class="stats-step-formula">X̄<sub>E</sub> − X̄<sub>C</sub> = 4.50 − 1.80 = <strong>2.70</strong></div>
-                    <p class="stats-step-note">El grupo experimental mejoró 2.70 puntos más.</p>
+                    <span class="stats-step-title">Resumen por grupo</span>
+                    <div class="stats-step-formula small">Control: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;1.80 · s²&nbsp;=&nbsp;1.73</div>
+                    <div class="stats-step-formula small">Experimental: n&nbsp;=&nbsp;10 · X̄&nbsp;=&nbsp;4.50 · s²&nbsp;=&nbsp;2.50</div>
+                    <p class="stats-step-note">Las medias y varianzas salen de las mejoras individuales.</p>
                   </div>
                 </div>
                 <div class="hypothesis-box">
@@ -785,8 +787,16 @@
               </div>
 
               <div class="stats-flow-col">
-                <div class="stats-step-card wide">
+                <div class="stats-step-card">
                   <span class="stats-step-num">4</span>
+                  <div class="stats-step-body">
+                    <span class="stats-step-title">Diferencia de medias</span>
+                    <div class="stats-step-formula">Δ&nbsp;=&nbsp;X̄<sub>E</sub> − X̄<sub>C</sub> = 4.50 − 1.80 = <strong>2.70</strong></div>
+                    <p class="stats-step-note">El grupo experimental mejoró 2.70 puntos más.</p>
+                  </div>
+                </div>
+                <div class="stats-step-card wide">
+                  <span class="stats-step-num">5</span>
                   <div class="stats-step-body">
                     <span class="stats-step-title">t de Welch</span>
                     <div class="math-formula">
@@ -808,16 +818,16 @@
                   </div>
                 </div>
                 <div class="stats-step-card">
-                  <span class="stats-step-num">5</span>
+                  <span class="stats-step-num">6</span>
                   <div class="stats-step-body">
                     <span class="stats-step-title">Grados de libertad y p-valor</span>
                     <div class="stats-step-formula small">gl Welch ≈ 17.43</div>
-                    <div class="stats-step-formula small">p bilateral = 2 · P(T ≥ |4.1498|) = <strong>0.000640</strong></div>
+                    <div class="stats-step-formula small">p bilateral = 2 · P(T<sub>gl</sub> ≥ |4.1498|) = <strong>0.000640</strong></div>
                     <p class="stats-step-note">El p-valor se obtiene desde la distribución t usando t y gl.</p>
                   </div>
                 </div>
                 <div class="stats-step-card">
-                  <span class="stats-step-num">6</span>
+                  <span class="stats-step-num">7</span>
                   <div class="stats-step-body">
                     <span class="stats-step-title">Decisión</span>
                     <div class="stats-step-formula">p&nbsp;=&nbsp;0.000640&nbsp;&lt;&nbsp;0.05 → se rechaza H₀</div>
@@ -870,6 +880,7 @@
                 <p style="font-size:16px; color:#51637a; font-style:italic; margin-top:8px;">Las integraciones futuras se consideran solo como trabajo posterior.</p>
               </div>
             </div>
+            <p class="proto-note" style="text-align:center; margin-top:8px;">Limitación: muestra intencional y alcance temático delimitado.</p>
           </div>
         </div>
       </section>
